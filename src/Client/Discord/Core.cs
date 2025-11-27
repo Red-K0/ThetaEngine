@@ -4,7 +4,7 @@ using NetCord.Gateway;
 using NetCord.Logging;
 using static NetCord.Gateway.GatewayIntents;
 
-namespace Theta.Discord;
+namespace Discord;
 
 /// <summary>
 /// Contains methods for initializing and preparing the bot.

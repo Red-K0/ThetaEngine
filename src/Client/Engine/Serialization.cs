@@ -2,7 +2,7 @@
 using System.Runtime.InteropServices;
 using System.Text;
 
-namespace Theta.Engine;
+namespace Engine;
 
 [AttributeUsage(AttributeTargets.Class)]
 internal sealed class EntityTypeIdAttribute(short id) : Attribute { public short Id { get; } = id; }

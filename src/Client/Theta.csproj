@@ -7,6 +7,7 @@
 		<Nullable>enable</Nullable>
 		<UserSecretsId>d69c4c26-7a39-462e-b6bb-d2911a437715</UserSecretsId>
 		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+	  <RootNamespace></RootNamespace>
 	</PropertyGroup>
 
 	<ItemGroup>

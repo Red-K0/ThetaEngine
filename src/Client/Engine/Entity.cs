@@ -1,8 +1,8 @@
-﻿using static Theta.Engine.Serialization;
-using static Theta.Engine.Tracking;
+﻿using static Engine.Serialization;
+using static Engine.Tracking;
 using System.Reflection;
 
-namespace Theta.Engine;
+namespace Engine;
 
 [EntityTypeId(0)]
 internal class Entity

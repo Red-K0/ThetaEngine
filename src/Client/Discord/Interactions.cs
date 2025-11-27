@@ -4,7 +4,7 @@ using NetCord.Services;
 using NetCord.Services.ApplicationCommands;
 using NetCord.Services.ComponentInteractions;
 
-namespace Theta.Discord;
+namespace Discord;
 
 internal static class Interactions
 {

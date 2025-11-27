@@ -1,10 +1,10 @@
 ﻿#pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring as nullable.
 
 using System.Collections.Concurrent;
-using Theta.Engine;
-using static Theta.Engine.Tracking;
+using Engine;
+using static Engine.Tracking;
 
-namespace Theta.Testing;
+namespace Testing;
 
 internal static class SerializationTest
 {

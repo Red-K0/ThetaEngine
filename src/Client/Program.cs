@@ -1,5 +1,5 @@
-﻿using Theta.Discord;
-using Theta.Testing;
+﻿using Discord;
+using Testing;
 
 Console.CursorVisible = false;
 

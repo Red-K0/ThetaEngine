@@ -1,7 +1,7 @@
 ﻿using NetCord.Rest;
 using NetCord.Services.ApplicationCommands;
 
-namespace Theta.Discord;
+namespace Discord;
 
 #pragma warning disable CA1724
 

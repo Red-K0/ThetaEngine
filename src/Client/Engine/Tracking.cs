@@ -1,6 +1,6 @@
 ﻿using System.Collections.Concurrent;
 
-namespace Theta.Engine;
+namespace Engine;
 
 internal static class Tracking
 {
