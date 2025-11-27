@@ -1,4 +1,4 @@
-﻿using Theta.Discord.Backend;
+﻿using Theta.Discord;
 using Theta.Testing;
 
 Console.CursorVisible = false;
@@ -8,7 +8,7 @@ AppDomain app = AppDomain.CurrentDomain;
 app.UnhandledException += static async (_, e) =>
 {
 	Console.Clear();
-	Core.Log($"An unhandled exception occurred, with message: {((Exception)e.ExceptionObject).Message}", NetCord.Logging.LogLevel.Critical);
+	Console.WriteLine($"An unhandled exception occurred, with message: {((Exception)e.ExceptionObject).Message}\n");
 	if (e.IsTerminating) await Core.Restart();
 };
 
