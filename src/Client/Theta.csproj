@@ -1,28 +1,29 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
 	<PropertyGroup>
 		<OutputType>Exe</OutputType>
 		<TargetFramework>net10.0</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
+		<SatelliteResourceLanguages>en</SatelliteResourceLanguages>
 		<UserSecretsId>d69c4c26-7a39-462e-b6bb-d2911a437715</UserSecretsId>
 		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-	  <RootNamespace></RootNamespace>
+		<RootNamespace></RootNamespace>
 	</PropertyGroup>
 
 	<ItemGroup>
-
+		<PackageReference Include="Microsoft.CodeAnalysis" Version="5.0.0" />
 		<PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="10.0.0-preview.5.25277.114" />
 		<PackageReference Include="NetCord" Version="1.0.0-alpha.433" />
 		<PackageReference Include="NetCord.Services" Version="1.0.0-alpha.433" />
-
 	</ItemGroup>
 
-	<ItemGroup Label="Global Usings">
+  <ItemGroup>
+	<ProjectReference Include="..\Theta.Analyzers\Theta.Analyzers.CodeFixes\Theta.Analyzers.CodeFixes.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
+	<ProjectReference Include="..\Theta.Analyzers\Theta.Analyzers\Theta.Analyzers.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
+  </ItemGroup>
 
+  <ItemGroup Label="Global Usings">
 		<Using Include="System.Diagnostics" />
 		<Using Include="System.Diagnostics.CodeAnalysis" />
-
 	</ItemGroup>
-
 </Project>

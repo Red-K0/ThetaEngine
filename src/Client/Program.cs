@@ -1,5 +1,5 @@
 ﻿using Discord;
-using Testing;
+using Engine;
 
 Console.CursorVisible = false;
 
@@ -12,8 +12,6 @@ app.UnhandledException += static async (_, e) =>
 	if (e.IsTerminating) await Core.Restart();
 };
 
-
-SerializationTest.RunTest();
+await Core.Start();
 
 await Task.Delay(Timeout.Infinite);
-

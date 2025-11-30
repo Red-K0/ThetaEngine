@@ -4,8 +4,7 @@ using System.Reflection;
 
 namespace Engine;
 
-[EntityTypeId(0)]
-internal class Entity
+internal abstract class Entity
 {
 	public static explicit operator Entity(uint a) => TryGetEntity(a, out Entity? b) ? b : throw new KeyNotFoundException($"Reference '{a}' not found.");
 	public static explicit operator uint(Entity a) => a.Reference;
@@ -16,7 +15,7 @@ internal class Entity
 
 	public Entity() => AssignReference(this);
 
-	public EntityRecord Save() => new(Reference, GetType().GetCustomAttribute<EntityTypeIdAttribute>()!.Id, SaveData());
+	public EntityRecord Save() => new(Reference, GetType().GetCustomAttribute<EntityMarkerAttribute>()!.Id, SaveData());
 
 	public virtual void ClearData() { }
 
