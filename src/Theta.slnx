@@ -1,7 +1,7 @@
 <Solution>
-  <Folder Name="/Analyzers/">
-    <Project Path="Theta.Analyzers/Theta.Analyzers.CodeFixes/Theta.Analyzers.CodeFixes.csproj" Id="75d00747-4c99-418a-85c4-b789c5778ebb" />
-    <Project Path="Theta.Analyzers/Theta.Analyzers/Theta.Analyzers.csproj" Id="231e2fe9-01ea-429d-864b-7716a7fa3999" />
+  <Folder Name="/Roslyn/">
+    <Project Path="Roslyn/CodeFixes/CodeFixes.csproj" />
+    <Project Path="Roslyn/Analyzers/Analyzers.csproj" Id="231e2fe9-01ea-429d-864b-7716a7fa3999" />
   </Folder>
   <Project Path="Client\Theta.csproj" />
 </Solution>

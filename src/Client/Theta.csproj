@@ -8,26 +8,28 @@
 		<UserSecretsId>d69c4c26-7a39-462e-b6bb-d2911a437715</UserSecretsId>
 		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 		<RootNamespace></RootNamespace>
+		<PreserveCompilationContext>false</PreserveCompilationContext>
+		<GenerateDependencyFile>false</GenerateDependencyFile>
 		<ApplicationIcon>..\..\assets\Result.ico</ApplicationIcon>
 		<PlatformTarget>x64</PlatformTarget>
 	</PropertyGroup>
+
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-	  <DebugType>full</DebugType>
+		<DebugType>full</DebugType>
 	</PropertyGroup>
+
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-	  <DebugType>none</DebugType>
+		<DebugType>none</DebugType>
 	</PropertyGroup>
+
+	<!-- External References -->
 
 	<ItemGroup>
-		<PackageReference Include="Microsoft.CodeAnalysis" Version="5.0.0" />
-		<PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="10.0.0-preview.5.25277.114" />
+		<ProjectReference Include="..\Theta.Analyzers\Theta.Analyzers\Theta.Analyzers.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
+		<ProjectReference Include="..\Theta.Analyzers\Theta.Analyzers\Theta.CodeFixes.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
+
 		<PackageReference Include="NetCord" Version="1.0.0-alpha.433" />
 		<PackageReference Include="NetCord.Services" Version="1.0.0-alpha.433" />
-	</ItemGroup>
-
-  <ItemGroup>
-	<ProjectReference Include="..\Theta.Analyzers\Theta.Analyzers.CodeFixes\Theta.Analyzers.CodeFixes.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
-	<ProjectReference Include="..\Theta.Analyzers\Theta.Analyzers\Theta.Analyzers.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
   </ItemGroup>
 
   <ItemGroup Label="Global Usings">

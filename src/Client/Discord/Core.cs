@@ -1,5 +1,4 @@
-﻿using Microsoft.Extensions.Configuration;
-using NetCord;
+﻿using NetCord;
 using NetCord.Gateway;
 using NetCord.Logging;
 using static NetCord.Gateway.GatewayIntents;
@@ -11,7 +10,7 @@ namespace Discord;
 /// </summary>
 internal static class Core
 {
-	public static readonly GatewayClient Client = new(new BotToken(new ConfigurationBuilder().AddUserSecrets<Program>().Build().GetSection("DiscordToken").Value!), new()
+	public static readonly GatewayClient Client = new(new BotToken(Environment.GetEnvironmentVariable("THETA_TOKEN")!), new()
 	{ 
 		Intents = Guilds | GuildUsers | GuildMessageReactions,
 		Logger = new ConsoleLogger()

@@ -5,7 +5,7 @@ using Microsoft.CodeAnalysis.Diagnostics;
 namespace Theta.Analyzers;
 
 [DiagnosticAnalyzer(LanguageNames.CSharp)]
-public class ThetaAnalyzersAnalyzer : DiagnosticAnalyzer
+public class Analyzer : DiagnosticAnalyzer
 {
 	public const string DiagnosticID_Sealed = "THTA0001";
 	public const string DiagnosticID_DuplicateID = "THTA0002";

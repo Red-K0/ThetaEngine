@@ -8,11 +8,11 @@ using Microsoft.CodeAnalysis.CSharp.Syntax;
 
 namespace Theta.Analyzers;
 
-[ExportCodeFixProvider(LanguageNames.CSharp, Name = nameof(ThetaAnalyzersCodeFixProvider)), Shared]
-public class ThetaAnalyzersCodeFixProvider : CodeFixProvider
+[ExportCodeFixProvider(LanguageNames.CSharp, Name = nameof(CodeFixProvider)), Shared]
+public class CodeFixProvider : Microsoft.CodeAnalysis.CodeFixes.CodeFixProvider
 {
 	public sealed override ImmutableArray<string> FixableDiagnosticIds => [
-		ThetaAnalyzersAnalyzer.DiagnosticID_Sealed
+		Analyzer.DiagnosticID_Sealed
 	];
 
 	public sealed override FixAllProvider GetFixAllProvider() => WellKnownFixAllProviders.BatchFixer;
@@ -27,7 +27,7 @@ public class ThetaAnalyzersCodeFixProvider : CodeFixProvider
 
 			switch (diagnostic.Id)
 			{
-				case ThetaAnalyzersAnalyzer.DiagnosticID_Sealed: context.RegisterCodeFix(CodeAction.Create("Mark class as sealed", c => ApplySealedModifierAsync(context.Document, declaration, c), "MarkAsSealed"), diagnostic);
+				case Analyzer.DiagnosticID_Sealed: context.RegisterCodeFix(CodeAction.Create("Mark class as sealed", c => ApplySealedModifierAsync(context.Document, declaration, c), "MarkAsSealed"), diagnostic);
 					break;
 			}
 		}
