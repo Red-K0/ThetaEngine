@@ -10,7 +10,7 @@
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.CodeAnalysis.CSharp.Workspaces" Version="5.0.0" PrivateAssets="all" />
-		<ProjectReference Include="..\Theta.Analyzers\Theta.Analyzers.csproj" OutputItemType="Analyzer" />
+		<ProjectReference Include="..\Analyzers\Analyzers.csproj" OutputItemType="Analyzer" />
 		<PackageReference Include="System.Collections.Immutable" Version="10.0.0" />
 	</ItemGroup>
 </Project>
