@@ -8,6 +8,14 @@
 		<UserSecretsId>d69c4c26-7a39-462e-b6bb-d2911a437715</UserSecretsId>
 		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 		<RootNamespace></RootNamespace>
+		<ApplicationIcon>..\..\assets\Result.ico</ApplicationIcon>
+		<PlatformTarget>x64</PlatformTarget>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+	  <DebugType>full</DebugType>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+	  <DebugType>none</DebugType>
 	</PropertyGroup>
 
 	<ItemGroup>
