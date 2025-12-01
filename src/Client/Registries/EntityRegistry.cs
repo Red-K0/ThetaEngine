@@ -1,8 +1,9 @@
 ﻿using System.Collections.Concurrent;
+using Engine;
 
-namespace Engine;
+namespace Registries;
 
-internal static class Tracking
+internal static class EntityRegistry
 {
 	public static readonly Lock SaveLoadLock = new();
 
@@ -48,8 +49,6 @@ internal static class Tracking
 
 	public static void ClearState()
 	{
-		foreach (Entity item in HeldReferences.Values) item.ClearData();
-
 		HeldReferences.Clear();
 
 		GC.Collect(2, GCCollectionMode.Forced, true, false);

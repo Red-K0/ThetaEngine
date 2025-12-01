@@ -2,10 +2,11 @@
 using Engine;
 using NetCord.Rest;
 using NetCord.Services.ApplicationCommands;
+using Registries;
 
 namespace Discord.Commands;
 
-public sealed partial class System : ApplicationCommandModule<SlashCommandContext>
+public sealed class System : ApplicationCommandModule<SlashCommandContext>
 {
 	private static string FormatBytes(double bytes)
 	{
@@ -33,9 +34,9 @@ public sealed partial class System : ApplicationCommandModule<SlashCommandContex
 				embed.Description = $"""
 				```ansi
 				Entity Tracker State:           
-				- Next Reference ID: {Tracking.NextReference}
-				- Held References:   {Tracking.HeldReferences.Count}
-				- Free References:   {Tracking.FreedReferences.Count}
+				- Next Reference ID: {EntityRegistry.NextReference}
+				- Held References:   {EntityRegistry.HeldReferences.Count}
+				- Free References:   {EntityRegistry.FreedReferences.Count}
 				```
 				""";
 				break;
@@ -109,10 +110,11 @@ public sealed partial class System : ApplicationCommandModule<SlashCommandContex
 
 		await RespondAsync(InteractionCallback.Message(new() { Embeds = [embed]}));
 	}
+
 	public enum QueryType
 	{
 		EntityTracker,
 		MemoryUsage,
-		SaveFiles
+		SaveFiles,
 	}
 }
